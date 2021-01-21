@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100vh;
+    background: #333;
+    color: #ccc;
+    overflow: hidden;
+}
+
+.container {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 3rem;
+}
+
+h1, h2 {
+
+    font-weight: 200;
+    margin: 0 auto;
+    font-size: 3.5rem;
+}
+
+/*cursor*/
+.txt-type {
+    border-right: 0.3rem solid rgba(255,255,255, .8);
+    animation: blinkTextCursor 500ms steps(40) infinite normal;
+}
+@keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255,255,255 .8);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+
+@media(min-width:1200px){
+    .container{
+        padding: 0 1rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 500px){
+    h1{
+        font-size:2.5rem;
+    }
+}
